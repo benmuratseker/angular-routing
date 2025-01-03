@@ -17,6 +17,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { BreadcrumbsComponent } from './shared-ui/breadcrumbs/breadcrumbs.component';
 import { ContactComponent } from './contact/contact.component';
+import { RouterModule } from '@angular/router';//add router module to app
+
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
+    RouterModule.forRoot([])//creates single instance for router module
   ],
   providers: [],
   bootstrap: [AppComponent]
