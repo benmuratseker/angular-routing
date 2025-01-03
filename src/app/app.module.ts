@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -17,8 +17,21 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { BreadcrumbsComponent } from './shared-ui/breadcrumbs/breadcrumbs.component';
 import { ContactComponent } from './contact/contact.component';
-import { RouterModule } from '@angular/router';//add router module to app
+import { RouterModule, Routes } from '@angular/router';//add router module to app
 
+export const ROUTES : Routes = [
+  {
+    path : 'home',
+    component : HomeComponent,
+  },
+  {
+    path: '',
+    //component : HomeComponent
+    //if we use redirect then we need to define it with pathMatch
+    redirectTo: 'home',
+    pathMatch: 'full',//default behavour is prefix not full
+  }
+];
 
 @NgModule({
   declarations: [
@@ -41,7 +54,7 @@ import { RouterModule } from '@angular/router';//add router module to app
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule.forRoot([])//creates single instance for router module
+    RouterModule.forRoot(ROUTES)//creates single instance for router module
   ],
   providers: [],
   bootstrap: [AppComponent]
