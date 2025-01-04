@@ -30,6 +30,11 @@ export const ROUTES : Routes = [
     //if we use redirect then we need to define it with pathMatch
     redirectTo: 'home',
     pathMatch: 'full',//default behavour is prefix not full
+  },
+  {
+    path: '**',
+    //component : HomeComponent, // sends every wrong url to home component
+    component : NotFoundComponent
   }
 ];
 
@@ -54,7 +59,9 @@ export const ROUTES : Routes = [
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule.forRoot(ROUTES)//creates single instance for router module
+    RouterModule.forRoot(ROUTES, {
+      enableTracing : true//to see router events on console of web browser
+    })//creates single instance for router module
   ],
   providers: [],
   bootstrap: [AppComponent]
