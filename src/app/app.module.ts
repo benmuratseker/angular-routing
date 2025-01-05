@@ -17,7 +17,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { BreadcrumbsComponent } from './shared-ui/breadcrumbs/breadcrumbs.component';
 import { ContactComponent } from './contact/contact.component';
-import { RouterModule, Routes } from '@angular/router';//add router module to app
+import { RouterLink, RouterLinkActive, RouterModule, Routes } from '@angular/router';//add router module to app
 import { AboutComponent } from './about/about.component';
 import { ProductsViewComponent } from './products-view/products-view.component';
 
@@ -85,7 +85,9 @@ export const ROUTES : Routes = [
     // RouterModule.forRoot(ROUTES, {
     //   enableTracing : true//to see router events on console of web browser
     // })//creates single instance for router module
-    RouterModule.forRoot(ROUTES)//creates single instance for router module
+    RouterModule.forRoot(ROUTES),//creates single instance for router module
+    RouterLink,
+    RouterLinkActive,
   ],
   providers: [],
   bootstrap: [AppComponent]
