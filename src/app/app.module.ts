@@ -43,7 +43,7 @@ export const ROUTES : Routes = [
     component : HomeComponent,
   },
   {
-    path : ROUTER_TOKENS.SHOP,
+    path : `${ROUTER_TOKENS.SHOP}/:categoryId`,
     component : ProductsViewComponent,
   },
   {
@@ -85,7 +85,7 @@ export const ROUTES : Routes = [
     // RouterModule.forRoot(ROUTES, {
     //   enableTracing : true//to see router events on console of web browser
     // })//creates single instance for router module
-    RouterModule.forRoot(ROUTES),//creates single instance for router module
+    RouterModule.forRoot(ROUTES, { bindToComponentInputs: true }),//creates single instance for router module
     RouterLink,
     RouterLinkActive,
   ],

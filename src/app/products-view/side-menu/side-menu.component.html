@@ -1,4 +1,5 @@
-<div class="side-nav" *ngIf="selectedPie$ | async as selectedPie">
+<!-- <div class="side-nav" *ngIf="selectedPie$ | async as selectedPie"> -->
+  <div class="side-nav">
   <!-- <button
     *ngFor="let pie of pies$ | async"
     class="image-button"
@@ -7,10 +8,19 @@
   <button
     *ngFor="let pie of pies$ | async"
     class="image-button"
+    [routerLink]="['./']"
+    [queryParams]="{ productId: pie.id }"
+    queryParamsHandling="merge"
+    routerLinkActive="active-link"
+    ariaCurrentWhenActive="page"
   >
-    <img
+    <!-- <img
       [src]="pie.thumb"
       alt="image of person sticking a fork in a piece of pie"
+    /> -->
+    <img
+      [src]="pie.thumb"
+      [alt]="pie.title"
     />
   </button>
 </div>

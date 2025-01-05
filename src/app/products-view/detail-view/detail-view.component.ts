@@ -17,5 +17,5 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class DetailViewComponent {
   selectedPie$ = this.pieService.selectedPie$;
-  constructor(private readonly pieService: PieService,){}
+  constructor(private readonly pieService: PieService){}
 }
