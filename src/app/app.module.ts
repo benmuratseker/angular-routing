@@ -18,18 +18,41 @@ import { MatButtonModule } from '@angular/material/button';
 import { BreadcrumbsComponent } from './shared-ui/breadcrumbs/breadcrumbs.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';//add router module to app
+import { AboutComponent } from './about/about.component';
+import { ProductsViewComponent } from './products-view/products-view.component';
+
+export enum ROUTER_TOKENS {
+  HOME ='home',
+  SHOP='shop',
+  CONTACT='contact',
+  ABOUT='about',
+}
 
 export const ROUTES : Routes = [
-  {
-    path : 'home',
-    component : HomeComponent,
-  },
   {
     path: '',
     //component : HomeComponent
     //if we use redirect then we need to define it with pathMatch
-    redirectTo: 'home',
+    //redirectTo: 'home',
+    redirectTo : ROUTER_TOKENS.HOME,
     pathMatch: 'full',//default behavour is prefix not full
+  },
+  {
+    //path : 'home',
+    path : ROUTER_TOKENS.HOME,
+    component : HomeComponent,
+  },
+  {
+    path : ROUTER_TOKENS.SHOP,
+    component : ProductsViewComponent,
+  },
+  {
+    path : ROUTER_TOKENS.CONTACT,
+    component : ContactComponent,
+  },
+  {
+    path : ROUTER_TOKENS.ABOUT,
+    component : AboutComponent,
   },
   {
     path: '**',

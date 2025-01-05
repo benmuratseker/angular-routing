@@ -4,13 +4,21 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit{
+
+export class HomeComponent {
   
-  constructor() {
-    console.log('In Constructor');
-  }
-  ngOnInit(): void {
-    console.log('On Init')
-  }
 
 }
+
+//#region Route tracing
+// export class HomeComponent implements OnInit{
+  
+//   constructor() {
+//     console.log('In Constructor');
+//   }
+//   ngOnInit(): void {
+//     console.log('On Init')
+//   }
+
+// }
+//#endregion

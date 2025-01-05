@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 
@@ -6,21 +7,28 @@ import { NavigationStart, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
 
-  constructor(private readonly router: Router) {
-    
-  }
+export class AppComponent{
 
-  ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationStart) {
-        console.log('Navigation Start');
-      }
-    })
-  }
-  
-  onActivate(event: unknown){
-    console.log('on activate', event);
-  }
 }
+
+//#region Route tracing
+// export class AppComponent implements OnInit{
+
+//   constructor(private readonly router: Router) {
+    
+//   }
+
+//   ngOnInit(): void {
+//     this.router.events.subscribe((event) => {
+//       if (event instanceof NavigationStart) {
+//         console.log('Navigation Start');
+//       }
+//     })
+//   }
+  
+//   onActivate(event: unknown){
+//     console.log('on activate', event);
+//   }
+// }
+//#endregion
