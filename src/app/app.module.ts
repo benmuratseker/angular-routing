@@ -82,9 +82,10 @@ export const ROUTES : Routes = [
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule.forRoot(ROUTES, {
-      enableTracing : true//to see router events on console of web browser
-    })//creates single instance for router module
+    // RouterModule.forRoot(ROUTES, {
+    //   enableTracing : true//to see router events on console of web browser
+    // })//creates single instance for router module
+    RouterModule.forRoot(ROUTES)//creates single instance for router module
   ],
   providers: [],
   bootstrap: [AppComponent]

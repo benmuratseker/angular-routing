@@ -1,8 +1,12 @@
 <div class="side-nav" *ngIf="selectedPie$ | async as selectedPie">
-  <button
+  <!-- <button
     *ngFor="let pie of pies$ | async"
     class="image-button"
     (click)="selectPie(pie.id)"
+  > -->
+  <button
+    *ngFor="let pie of pies$ | async"
+    class="image-button"
   >
     <img
       [src]="pie.thumb"

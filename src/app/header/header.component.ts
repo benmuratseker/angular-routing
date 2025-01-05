@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Category } from '../models/pie';
 import { PieService } from '../services/pie.service';
+import { ROUTER_TOKENS } from '../app.module';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,7 @@ import { PieService } from '../services/pie.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  readonly ROUTER_TOKENS = ROUTER_TOKENS
   readonly Category = Category;
   constructor(
     private readonly pieService: PieService
