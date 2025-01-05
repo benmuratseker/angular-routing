@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <div class="pie-grid">
     <app-card>
       <img image src="../../assets/images/pie-1.png" alt="Delicious Apple Pie" />
@@ -15,5 +15,12 @@
       <h4 title>Classic Pecan Pie</h4>
       <p price>$18.95</p>
     </app-card>
+  </div>
+</section> -->
+<section>
+  <div class="pie-grid">
+    <app-card
+    *ngFor="let pie of featuredProducts()"
+    [pie]="pie"></app-card>
   </div>
 </section>
