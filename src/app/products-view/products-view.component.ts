@@ -18,7 +18,6 @@ export class ProductsViewComponent {
   private readonly pieService = inject(PieService);
 
   @Input() set categoryId(val: string){
-    debugger;
     this.pieService.setSelectedCategory(val);
   }
 }

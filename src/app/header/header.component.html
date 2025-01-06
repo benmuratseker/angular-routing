@@ -11,18 +11,27 @@
           ariaCurrentWhenActive="page" 
           class="menu-item" mat-button [matMenuTriggerFor]="menu">Shop <span>&#8964;</span></button>
           <mat-menu class="menu-dropdown" #menu="matMenu">
-            <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]" 
+            <!-- <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]" 
             mat-menu-item 
             (click)="changeCategory(Category.SEASONAL_PIE)">
+            Seasonal Pies</button> -->
+            <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]" 
+            mat-menu-item>
             Seasonal Pies</button>
-            <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]" 
+            <!-- <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]" 
             mat-menu-item 
             (click)="changeCategory(Category.FRUIT_PIE)">
+            Fruit Pies</button> -->
+            <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]" 
+            mat-menu-item>
             Fruit Pies</button>
-            <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.CHEESECAKE]" 
+            <!-- <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.CHEESECAKE]" 
             mat-menu-item 
             (click)="changeCategory(Category.CHEESECAKE)"
-            >Cheesecakes</button>
+            >Cheesecakes</button> -->
+            <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.CHEESECAKE]" 
+            mat-menu-item>
+            Cheesecakes</button>
             <!-- <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.ALL]" 
             mat-menu-item 
             (click)="changeCategory(Category.ALL)"
